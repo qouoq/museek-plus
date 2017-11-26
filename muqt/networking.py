@@ -7,7 +7,7 @@ import threading, time, select, sys
 DEBUG=1
 
 try:
-	from Crypto.Hash import SHA256
+	from Cryptodome.Hash import SHA256
 	
 except ImportError:	
 	

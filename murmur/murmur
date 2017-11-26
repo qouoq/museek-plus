@@ -74,7 +74,7 @@ except ImportError:
 import gc
 #gc.set_debug(gc.DEBUG_LEAK)
 try:
-	from Crypto.Hash import SHA256
+	from Cryptodome.Hash import SHA256
 	
 except ImportError:	
 	

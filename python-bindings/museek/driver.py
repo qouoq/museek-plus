@@ -21,12 +21,12 @@ import struct
 import random
 
 try:
-	from Crypto.Hash import SHA256
-	from Crypto.Cipher import AES
+	from Cryptodome.Hash import SHA256
+	from Cryptodome.Cipher import AES
 
 	class Cipher:
 		def __init__(self, key):
-			self.ctx = AES.new(SHA256.new(key).digest())
+			self.ctx = AES.new(SHA256.new(key).digest(), AES.MODE_ECB)
 		def decipher(self, value):
 			return self.ctx.decrypt(value)
 		def cipher(self, value):
